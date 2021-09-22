@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/samuelsegal/demo-cloud-config
+          #username:
+          #password
+          search-paths:
+            - 'station*'
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/samuelsegal/demo-cloud-config-perf
+              search-paths:
+                - 'station*'
