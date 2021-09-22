@@ -4,6 +4,8 @@ spring:
   cloud:
     config:
       server:
+        encrypt:
+          enabled: false
         git:
           uri: https://github.com/samuelsegal/demo-cloud-config
           #username:
@@ -17,3 +19,10 @@ spring:
               uri: https://github.com/samuelsegal/demo-cloud-config-perf
               search-paths:
                 - 'station*'
+  security:
+    user:
+      name: samo
+      password: samo
+      
+encrypt.key: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ 
